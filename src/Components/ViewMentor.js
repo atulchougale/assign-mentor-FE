@@ -4,7 +4,7 @@ import axios from "axios";
 export default function ViewMentor(){// to view the selected mentors student
     let [allMentors,setAllMentors]=useState([]);
     let [mName,setmName]=useState("");
-    let [res,setRes]=useState("");//display the response message
+    
     let [students,setStudents]=useState([]);
     let count = 0;
     useEffect(()=>{
