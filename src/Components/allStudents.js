@@ -7,7 +7,7 @@ export default function AllStudents(){
         getAllData();//to get all students data
     },[])
     let getAllData = async()=>{
-        await axios.get("http://localhost:7000/users/all-students")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-students")
         .then((response)=>{
             setData(response.data)
         }).catch((error)=>console.log(error))
