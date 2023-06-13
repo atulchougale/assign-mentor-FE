@@ -12,7 +12,7 @@ export default function AddStudent(){
     },[])
     //to get all mentors and display in dropdown
     const getAllMentors = async()=>{
-        await axios.get("http://localhost:7000/users/all-mentors")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-mentors")
         .then((response)=>{
             console.log(response.data)
             response.data.user.map((e)=>{
@@ -31,7 +31,7 @@ export default function AddStudent(){
     }
     // creating student with a mentor or without mentor
     const handleEvent =async()=>{
-        await axios.post("http://localhost:7000/users/add-student",{
+        await axios.post("https://assign-mentor-be.onrender.com/users/add-student",{
             studentName:sName,
             studentMentor:mName
         })

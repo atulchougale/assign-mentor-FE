@@ -11,7 +11,7 @@ export default function ChangeMentor(){
         getAllStudents();//get all students details
     },[])
     const getAllMentors = async()=>{
-        await axios.get("http://localhost:7000/users/all-mentors")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-mentors")
         .then((response)=>{
             setAllMentors(response.data.user);
             // console.log(response)
@@ -21,7 +21,7 @@ export default function ChangeMentor(){
         })
     }
     const getAllStudents = async()=>{
-        await axios.get("http://localhost:7000/users/all-students")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-students")
         .then((response)=>{
             setAllStudents(response.data);
             // console.log(response)
@@ -36,7 +36,7 @@ export default function ChangeMentor(){
             if(e.studentName===sName)
                 oldMentor=(e.studentMentor)
         })
-        await axios.post("http://localhost:7000/users/change-mentor",{
+        await axios.post("https://assign-mentor-be.onrender.com/users/change-mentor",{
             mentorName:mName,
             studentName:sName,
             oldMentor:oldMentor,

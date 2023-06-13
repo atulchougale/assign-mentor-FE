@@ -1,8 +1,8 @@
 .contain{
-    background: #01131b;
+    background: #9fd2e7;
     padding:10px;
     display:flex;
-    color: aliceblue;
+    color: rgb(5, 26, 44);
 }
 .title{
     display: flex;
@@ -22,7 +22,7 @@
     padding-left: 50px;
 }
 .link{
-    color: whitesmoke;
+    color: rgb(80, 50, 50);
 }
 
 .link:hover{

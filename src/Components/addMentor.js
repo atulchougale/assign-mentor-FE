@@ -12,7 +12,7 @@ export default function AddMentor(){
 
     // to get the details of all students without mentor
     const getAllStudents = async()=>{
-        await axios.get("http://localhost:7000/users/all-students")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-students")
         .then((response)=>{
             // console.log(response)
             response.data.map((e)=>{
@@ -32,7 +32,7 @@ export default function AddMentor(){
 
     // creating mentor with array of students
     const handleEvent =async()=>{
-        await axios.post("http://localhost:7000/users/add-mentor",{
+        await axios.post("https://assign-mentor-be.onrender.com/users/add-mentor",{
             mentorName:mName,
             mentorStudents:sNames
         })

@@ -13,7 +13,7 @@ export default function AssignStudents(){
         getAllStudents();
     },[])
     const getAllMentors = async()=>{
-        await axios.get("http://localhost:7000/users/all-mentors")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-mentors")
         .then((response)=>{
             setAllMentors(response.data.user);
             // console.log(response)
@@ -23,7 +23,7 @@ export default function AssignStudents(){
         })
     }
     const getAllStudents = async()=>{//get all students
-        await axios.get("http://localhost:7000/users/all-students")
+        await axios.get("https://assign-mentor-be.onrender.com/users/all-students")
         .then((response)=>{
             console.log(response.data.studentName)
             response.data.map((e)=>{
@@ -40,7 +40,7 @@ export default function AssignStudents(){
         })
     }
     const handleEvent =async()=>{//assigning students for selected mentor
-        await axios.post("http://localhost:7000/users/assign-students",{
+        await axios.post("https://assign-mentor-be.onrender.com/users/assign-students",{
             mentorName:mName,
             mentorStudents:sNames
         })

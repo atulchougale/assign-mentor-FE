@@ -1,8 +1,10 @@
-body{
-    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
-.elements{
-    display:grid;
+
+.elements {
+    display: grid;
     grid-template-columns: 120px 120px 120px 120px 120px;
     grid-gap: 20px;
     margin-top: 50px;
