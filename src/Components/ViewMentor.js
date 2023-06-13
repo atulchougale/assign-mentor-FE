@@ -11,7 +11,7 @@ export default function ViewMentor(){// to view the selected mentors student
         getAllMentors();
     },[])
     const getAllMentors = async()=>{
-        await axios.get("https://assign-mentor-be.onrender.com/users/all-mentors")
+        await axios.get("http://localhost:7000/users/all-mentors")
         .then((response)=>{
             setAllMentors(response.data.user);
             console.log(response.data.user)
@@ -21,7 +21,7 @@ export default function ViewMentor(){// to view the selected mentors student
         })
     }
     const handleEvent = async()=>{// to get the student details of particular mentor
-        await axios.post("https://assign-mentor-be.onrender.com/users/students",{
+        await axios.post("http://localhost:7000/users/students",{
             mentorName:mName
         }).then((response)=>{
             console.log(response.data.mentorStudents)

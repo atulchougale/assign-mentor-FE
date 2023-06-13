@@ -6,7 +6,7 @@ export default function AllMentors(){
         getAlldata();
     },[])
     let getAlldata = async()=>{// to get all mentor data
-        await axios.get("https://assign-mentor-be.onrender.com/users/all-mentors")
+        await axios.get("http://localhost:7000/users/all-mentors")
         .then((response)=>{
             console.log(response)
             setData(response.data.user);
@@ -36,6 +36,7 @@ export default function AllMentors(){
                                             <tbody>
                                                 {
                                                     e.mentorStudents.map((f)=>{
+                                                      
                                                         return<tr>{f}</tr>
                                                     })
                                                 }
